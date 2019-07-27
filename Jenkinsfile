@@ -51,7 +51,7 @@ pipeline {
           sh "mvn clean deploy"
           sh "skaffold version"
           sh "export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml"
-          sh "jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:\$(cat VERSION)"
+          sh "jx step post build --image $DOCKER_REGISTRY/$APP_NAME:\$(cat VERSION)"
         }
       }
     }

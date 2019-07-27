@@ -6,7 +6,7 @@ pipeline {
     ORG = 'rambo-singapore-gmail-com'
     APP_NAME = 'testproject'
     CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
-    DOCKER_REGISTRY_ORG = 'rambo.singapore@gmail.com'
+    DOCKER_REGISTRY_ORG = 'rambo'
   }
   stages {
     stage('CI Build and push snapshot') {
